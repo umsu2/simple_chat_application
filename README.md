@@ -1,2 +1,6 @@
 # simple_chat_application
-simple chat
+
+1. Flask based
+2. Profile Management - Postgres
+3. Chat Room - redis
+
