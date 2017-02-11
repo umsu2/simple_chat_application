@@ -18,4 +18,11 @@ class ProductionConfig(Config):
     """
     DEBUG = False
 
-
+config_mapping = {
+    'dev' : DevelopmentConfig,
+    'prod' : ProductionConfig,
+}
+def get_config(name):
+    if name in config_mapping:
+        return config_mapping[name]
+    raise NameError('{} is not a valid config'.format(name))
